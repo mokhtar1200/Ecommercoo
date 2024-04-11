@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button"
 
 export function CartSummary() {
   const { formattedTotalPrice, totalPrice, cartDetails, cartCount } = useShoppingCart();
-  const shippingAmount = cartCount > 0 ? 500 : 0;
-  const totalAmount = totalPrice + shippingAmount;
+  const shippingAmount = cartCount !> 0 ? 500 : 0;
+  const totalAmount = totalPrice ! + shippingAmount;
 
   return (
     <form
